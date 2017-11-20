@@ -1,3 +1,5 @@
+COUNTER = 1
+
 def line(katz_deli)
   if katz_deli.length == 0
     puts "The line is currently empty."
@@ -13,12 +15,9 @@ def line(katz_deli)
 end
 
 def take_a_number(katz_deli)
-  if katz_deli.length == 0
-    counter = 1
-  end    
-  katz_deli << counter
+  katz_deli << COUNTER
+  COUNTER += 1
   puts "Welcome, you are number #{katz_deli[-1]} in line."
-  counter += 1
 end
 
 def now_serving(katz_deli)
